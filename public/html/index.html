@@ -84,11 +84,11 @@
         <div class="nav_top">
             <label id="playbox" class="on" onclick="mp3_play();">
                 <audio id="audio" autoplay="autoplay">
-                    <source src="http://mp3.123hl.cn/wodemingzijiaoyilian.m4a" type="audio/mpeg">
+                    <source src="../mp3/dahuajiao.mp3" type="audio/mpeg">
                 </audio>
             </label>
         </div>
-        <img width="350" src="../images/page2-cut.jpg" style="display: none;">
+        <img width="350" src="../images/page2-cut.jpg" style="position: absolute; visibility: hidden;">
         <img src="http://file.xitie.net.cn/66_swipe_tip.png" style="" class="resize">
         <!-- Swiper -->
         <div class="swiper-container swiper-container-h">
@@ -108,7 +108,7 @@
                     <section class="page slide_01">
                         <div class="m-animationBox m-animationCloudBg" style="height: 605px;"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
                         <div class="page_bg a-fadeinB">
-                            <img width="100%" src="http://file.xitie.net.cn/66_page1_bg.png">
+                            <img width="100%" src="../images/66_page1_bg.png">
                         </div>
                         
                         <div class="page_avatar ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0s">
@@ -150,7 +150,7 @@
                 </div>
                 
                 <div class="swiper-slide">
-                    <div class="ani" swiper-animate-effect="ani_left_right" swiper-animate-duration="10s"><img style="height: 100%; display: inline;" src="../images/page4.jpg"></div>
+                    <div class="ani" style="height: 100%;" swiper-animate-effect="ani_left_right" swiper-animate-duration="10s"><img style="height: 100%; display: block;" src="../images/page4.jpg"></div>
                     <div>
                         <div class="pos_abs photo_tit ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
                             <div class="pic_word">一生一世，天长地久</div>
@@ -159,7 +159,7 @@
                 </div>
                 
                 <div class="swiper-slide">
-                    <div class="ani" swiper-animate-effect="ani_right_left" swiper-animate-duration="10s"><img style="height: 100%; display: inline;" src="../images/page5.jpg"></div>
+                    <div class="ani" style="height: 100%;" swiper-animate-effect="ani_right_left" swiper-animate-duration="10s"><img style="height: 100%; display: block;" src="../images/page5.jpg"></div>
                     <div>
                         <div class="pos_abs photo_tit ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
                             <div class="pic_word">愿得一心人，白头不相离</div>
@@ -201,12 +201,6 @@
                                 <p style="background:#000 url('../images/page5.jpg') center no-repeat;background-size: 100% auto;"></p>
                             </div>
                             <div class="swiper-slide">
-                                <p style="background:#000 url('../images/page6.jpg') center no-repeat;background-size: 100% auto;"></p>
-                            </div>
-                            <div class="swiper-slide">
-                                <p style="background:#000 url('../images/page7.jpg') center no-repeat;background-size: 100% auto;"></p>
-                            </div>
-                            <div class="swiper-slide">
                                 <p style="background:#000 url('../images/page8.jpg') center no-repeat;background-size: 100% auto;"></p>
                             </div>
                         </div>
@@ -225,7 +219,7 @@
                                 <li class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.6s"><h2><i></i>公交车:</h2>乘坐16路，鹿鹤转盘南下车，步行150米</li>
                             </ul>
                         </div>
-                        <div class="map_area ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="http://api.map.baidu.com/staticimage?center=113.394703,31.710239&width=200&height=200&zoom=18"></div>
+                        <div class="map_area ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="http://api.map.baidu.com/staticimage?center=113.394703,31.710239&width=300&height=200&zoom=18"></div>
                         <div class="map_btn ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s"><a href="http://api.map.baidu.com/marker?location=113.394703,31.710239&title=随州乐都大酒店&content=随州乐都大酒店&output=html&src=weiba|weiweb"><i></i>立即导航</a></div>
                     </section>
                 </div>
@@ -268,7 +262,7 @@
         </script>
         <script type="text/javascript">
         function mp3_play(mp3_url){
-        var qt_mp3_url = "http://mp3.123hl.cn/wodemingzijiaoyilian.m4a";
+        var qt_mp3_url = "../mp3/dahuajiao.mp3";
         if (mp3_url) {
         $('#playbox audio').get(0).pause();
         $('#playbox audio').get(0).setAttribute('src', mp3_url);
