@@ -56,7 +56,7 @@
         }
         /**/
         .ani_left_right{-webkit-animation:animation_left_right 20s linear 0s infinite both;}
-        @-webkit-keyframes animation_left_right{0%{-webkit-transform:translateX(-30%);margin-top:0px;margin-left:0px;}50%{-webkit-transform:translateX(-150%);margin-top:0px;margin-left:0px;}100%{-webkit-transform:translateX(-30%);margin-top:0px;margin-left:0px;}}
+        @-webkit-keyframes animation_left_right{0%{-webkit-transform:translateX(-30%);margin-top:0px;margin-left:0px;}50%{-webkit-transform:translateX(-120%);margin-top:0px;margin-left:0px;}100%{-webkit-transform:translateX(-30%);margin-top:0px;margin-left:0px;}}
         .ani_right_left{-webkit-animation:animation_right_left 20s linear 0s infinite both;}
         @-webkit-keyframes animation_right_left{0%{-webkit-transform:translateX(-100%);margin-top:0px;margin-left:0px;}50%{-webkit-transform:translateX(0px);margin-top:0px;margin-left:0px;}100%{-webkit-transform:translateX(-100%);margin-top:0px;margin-left:0px;}}
         .ani_zoom{-webkit-animation:animation_zoom 18s linear 0s infinite both;}
@@ -73,9 +73,6 @@
         height:100%;
         position:relative;
         margin:0 auto;
-        padding:35% 0;
-        background:#fffeee url('../images/page1.jpg') center no-repeat;
-        background-size:auto 100%;
         }
         </style>
     </head>
@@ -88,7 +85,6 @@
                 </audio>
             </label>
         </div>
-        <img width="350" src="../images/page2-cut.jpg" style="position: absolute; visibility: hidden;">
         <img src="http://file.xitie.net.cn/66_swipe_tip.png" style="" class="resize">
         <!-- Swiper -->
         <div class="swiper-container swiper-container-h">
@@ -96,7 +92,8 @@
                 
                 <div class="swiper-slide">
                     <section class="page slide_fm">
-                        <div class="fm_in"></div>
+                        <img src="../images/page1.jpg" style="position:absolute; transform: translate(-50%, 0);height: 100%;">
+                        <div class="fm_in"> </div>
                         <div class="welcome ani" style="display: none" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s">
                             <div class="inviter">您</div>
                             <div class="join">参加</div>
