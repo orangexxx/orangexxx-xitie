@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title><%=male%>、<%=female%>结婚喜帖</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link href='css/xitie.css' rel='stylesheet' type='text/css' />
+	</head>
+	<body>
+		<img src="images/<%=iconImg%>" style="position: absolute; opacity: 0;">
+		<span class="down-btn" style="z-index:9999999999 !important"></span>
+		<div class="nav_top">
+			<label id="playbox" class="on" onclick="mp3_play();">
+				<audio id="audio" autoplay="autoplay">
+					<source src="mp3/<%=music%>" type="audio/mpeg">
+				</audio>
+			</label>
+		</div>
+		<img src="http://file.xitie.net.cn/66_swipe_tip.png" style="" class="resize">
+		<!-- Swiper -->
+		<div class="swiper-container swiper-container-h">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<section class="page slide_fm">
+						<img src="../images/<%=bgImg%>" style="position:absolute; transform: translate(-50%, 0);height: 100%;">
+						<div class="fm_in"> </div>
+						<div class="welcome ani" style="display: none" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s">
+							<div class="inviter">您</div>
+							<div class="join">参加</div>
+							<div class="newman"><label><%=male%></label>&<label><%=female%></label>的婚礼</div>
+						</div>
+					</section>
+				</div>
+				<div class="swiper-slide">
+					<section class="page slide_01">
+						<div class="m-animationBox m-animationCloudBg" style="height: 605px;"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+						<div class="page_bg a-fadeinB">
+							<img width="100%" src="images/66_page1_bg.png">
+						</div>
+						
+						<div class="page_avatar ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0s">
+							<div class="avatar" ></div>
+							<div class="tx">
+								<img width="640" src="images/<%=iconImg%>">
+							</div>
+							<div class="married" >
+								<img src="http://file.xitie.net.cn/66_got_married.png" width="100%">
+							</div>
+							<div class="home_info">
+								<div class="red_box">
+									<div class="name_box">
+										<div class="name"><label><%=male%></label><span class="love">&</span><label><%=female%></label></div>
+									</div>
+									<div class="time" onclick="location.reload()">
+										<%=timeS%><br>
+										<%=timeO%>
+									</div>
+									<div class="address">
+									<%=addr.name%></div>
+								</div>
+								<div class="info_bot"><img src="http://file.xitie.net.cn/66_info_bot.png" width="100%"></div>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="swiper-slide">
+					<section class="page slide_02">
+						<div class="marry_title a-bouncein">诚挚邀请</div>
+						<div class="word_box ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s">
+						<%=text%></div>
+						<div class="splite"></div>
+						<div class="word_box02 ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+							时间：<%=timeL%><br>
+							地点：<%=addr.name%><br>
+						</div>
+					</section>
+				</div>
+				
+				<div class="swiper-slide">
+					<div class="ani" style="height: 100%;" swiper-animate-effect="ani_left_right" swiper-animate-duration="10s"><img style="height: 100%; display: block;" src="images/<%=imgs[0].img%>"></div>
+					<div>
+						<div class="pos_abs photo_tit ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
+							<div class="pic_word"><%=imgs[0].text%></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="swiper-slide">
+					<div class="ani" style="height: 100%;" swiper-animate-effect="ani_right_left" swiper-animate-duration="10s"><img style="height: 100%; display: block;" src="images/<%=imgs[1].img%>"></div>
+					<div>
+						<div class="pos_abs photo_tit ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
+							<div class="pic_word"><%=imgs[1].text%></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="swiper-slide">
+					<div class="ani" swiper-animate-effect="ani_zoom" swiper-animate-duration="10s"><img style="width: 110%; display: inline;" src="images/<%=imgs[2].img%>"></div>
+					<div>
+						<div class="pos_abs photo_tit ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
+							<div class="pic_word"><%=imgs[2].text%></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="swiper-slide">
+					<div  class="ani" swiper-animate-effect="ani_narrow" swiper-animate-duration="10s"><img style="width: 110%; display: inline; margin-left: -5%" src="images/<%=imgs[3].img%>"></div>
+					<div>
+						<div class="pos_abs photo_tit ani" swiper-animate-effect="zoomIn" swiper-animate-duration="2s" swiper-animate-delay="0.3s">
+							<div class="pic_word"><%=imgs[3].text%></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="swiper-slide">
+					<div class="swiper-container swiper-container-v">
+						<div class="swiper-wrapper">
+							<%imgs.forEach(function(item) {%>
+								<div class="swiper-slide">
+									<p style="background:#000 url('images/<%=item.img%>') center no-repeat;background-size: 100% auto;"></p>
+								</div>
+							<%});%>
+						</div>
+						<div class="swiper-pagination swiper-pagination-v swiper-pagination-white"></div>
+						<div class="swiper-button-next swiper-button-white"></div>
+						<div class="swiper-button-prev swiper-button-white"></div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<section class="page slide_05">
+						<div class="marry_title">乘车&导航</div>
+						<div class="dh_area">
+							<strong class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"><%=addr.name%></strong>
+							<ul class="ul_item">
+								<li class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s"><h2><i></i>自驾:</h2><%=addr.bycar%></li>
+								<li class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.6s"><h2><i></i>公交车:</h2><%=addr.bybus%></li>
+							</ul>
+						</div>
+						<div class="map_area ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s"><img src="http://api.map.baidu.com/staticimage?center=<%=addr.location%>&width=300&height=200&zoom=18"></div>
+						<div class="map_btn ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s"><a href="http://api.map.baidu.com/marker?location=113.394703,31.710239&title=<%=addr.name%>&content=<%=addr.name%>&output=html&src=weiba|weiweb"><i></i>立即导航</a></div>
+					</section>
+				</div>
+				<div class="swiper-slide">
+					<section class="page slide_08">
+						<div class="wedding_title ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="1.5s" swiper-animate-delay="0s"><img src="http://file.xitie.net.cn/66_wedding_bg.png" width="100%"></div>
+						<ul class="ul_btn">
+							<li class="tel_xl ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.6s"><a href="tel:<%=malePhone%>">联系新郎<i></i></a></li>
+							<li class="tel_xn ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="1s" swiper-animate-delay="0.9s"><a href="tel:<%=femalePhone%>">联系新娘<i></i></a></li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+		<script src="http://apps.bdimg.com/libs/jquery/1.8.0/jquery.min.js"></script>
+        <script src="js/swiper-3.3.1.min.js"></script>
+        <script src="js/swiper.animate1.0.2.min.js"></script>
+        <script src="js/xitie.js"></script>
+	</body>
+</html>
