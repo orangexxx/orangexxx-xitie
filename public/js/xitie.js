@@ -44,13 +44,5 @@ $().ready(function() {
       music.play();
     }
   });
-  document.addEventListener("WeixinJSBridgeReady", function onBridgeReady() {
-    document.getElementById("audio").play();
-  });
-  $("#overlay_ul").bind("click", function(evt) {
-    if ("UL" == evt.target.nodeName) {
-      this.className = 'overlay_ul';
-      $(this).find('li').removeClass('on');
-    }
-  });
+
 });
