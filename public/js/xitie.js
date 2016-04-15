@@ -1,23 +1,3 @@
-var swiperH = new Swiper('.swiper-container-h', {
-  direction: 'vertical',
-  spaceBetween: 0,
-  onInit: function(swiper) {
-    $('.welcome').show();
-    swiperAnimateCache(swiper);
-    swiperAnimate(swiper);
-  },
-  onSlideChangeEnd: function(swiper) {
-    swiperAnimate(swiper);
-  }
-});
-var swiperV = new Swiper('.swiper-container-v', {
-  pagination: '.swiper-pagination-v',
-  paginationClickable: true,
-  nextButton: '.swiper-button-next',
-  prevButton: '.swiper-button-prev',
-  spaceBetween: 0,
-  autoplay: 2000,
-});
 function mp3_play(mp3_url) {
   var qt_mp3_url = "../mp3/dahuajiao.mp3";
   if (mp3_url) {
@@ -38,6 +18,26 @@ function mp3_play(mp3_url) {
   }
 }
 $().ready(function() {
+  var swiperH = new Swiper('.swiper-container-h', {
+    direction: 'vertical',
+    spaceBetween: 0,
+    onInit: function(swiper) {
+      $('.welcome').show();
+      swiperAnimateCache(swiper);
+      swiperAnimate(swiper);
+    },
+    onSlideChangeEnd: function(swiper) {
+      swiperAnimate(swiper);
+    }
+  });
+  var swiperV = new Swiper('.swiper-container-v', {
+    pagination: '.swiper-pagination-v',
+    paginationClickable: true,
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+    spaceBetween: 0,
+    autoplay: 2000,
+  });
   $(document).one('touchstart', function(e) {
     var music = document.getElementById("audio");
     if (music.paused) {
